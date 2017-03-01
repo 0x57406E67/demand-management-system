@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/com/demo/action/OrderAction.java=UTF-8
+encoding//src/com/demo/action/StaticAction.java=UTF-8
+encoding//src/com/demo/dao/impl/OrderDaoHibImpl.java=UTF-8
+encoding//src/com/demo/model/TOrder.java=UTF-8

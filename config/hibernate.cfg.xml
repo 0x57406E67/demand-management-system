@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+<property name="hibernate.query.factory_class">
+org.hibernate.hql.classic.ClassicQueryTranslatorFactory
+</property>
+</xml-body>

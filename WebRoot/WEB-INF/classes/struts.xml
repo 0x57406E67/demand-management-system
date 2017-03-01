@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+ 
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+ 	<constant name="struts.action.extension" value="do,action" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.multipart.maxSize" value="20971520"/>
+	<!-- Struts中的Object 采用Spring装配实例化 -->
+ 	<constant name="objectFactory" value="spring" />
+ 	<constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" />
+ 	<include file="struts_global.xml"></include>
+	<include file="struts_jfreechart.xml"></include>
+</struts>

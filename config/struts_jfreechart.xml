@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	 <package name="lin" namespace="/static"  extends="jfreechart-default"> 
+		 <!-- 定义一个名为 bookChart 的 Action --> 
+		 <action name="orderChart" class="com.demo.action.StaticAction"> 
+			 <result type="chart"> 
+				 <!-- 定义 JFreeChart 报表的大小 --> 
+				 <param name="width">800</param> 
+				 <param name="height">600</param> 
+			 </result> 
+		 </action> 
+	 </package> 
+
+</struts>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<beans xmlns="http://www.springframework.org/schema/beans"    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:context="http://www.springframework.org/schema/context"  
+    xmlns:jee="http://www.springframework.org/schema/jee"  
+    xmlns:tx="http://www.springframework.org/schema/tx"  
+    xsi:schemaLocation="    
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd  
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd  
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.0.xsd  
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd"> 
+   <!-- 数据源导入 -->     
+    <import resource="data_source.xml"/>  
+    <!-- Spring 注解 -->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> 
+    
+    <!-- jdbc数据库事务配置 -->
+  <!--  <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>--> 
+	<!-- hibernate 事务 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 声明使用注解式事务 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- 定义事务的处理类 -->
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean>
+	<!-- Spring扫描组件 -->
+	<!-- 自动扫描与装配 -->
+	<context:component-scan base-package="com.demo"></context:component-scan>
+</beans>

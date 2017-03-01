@@ -1,0 +1,25 @@
+1.搭建开发环境为ssh框架
+      1.1导入开发包
+        antlr-2.7.7.jar开发包
+        aopalliance-1.0.jar
+        asm-3.3.jar
+        asm-commons-3.3.jar
+        asm-tree-3.3.jar
+        aspectjweaver.jar
+        cglib-nodep-2.1_3.jar
+        classworlds-1.1.jar
+        commons-beanutils-1.8.0.jar
+        commons-chain-1.2.jar
+        commons-collections-3.1.jar
+        commons-dbcp-1.2.1.jar
+        commons-fileupload-1.3.1.jar
+        commons-io-2.2.jar
+        commons-lang3-3.2.jar等等。
+       1.2创建组织程序包
+        com.demo.action
+        com.demo.dao
+        com.demo.dao.impl
+        com.demo.model
+        com.demo.service 
+        com.demo.service.impl
+               工具程序包：util
